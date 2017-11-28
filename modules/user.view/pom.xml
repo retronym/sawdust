@@ -44,7 +44,8 @@
 
     <build>
         <directory>target/maven</directory>
-        <sourceDirectory>src/test/java/user.view</sourceDirectory>
+        <sourceDirectory>false</sourceDirectory>
+        <testSourceDirectory>src/test/java/user.view</testSourceDirectory>
         <plugins>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
@@ -60,13 +61,14 @@
                     </execution>
                 </executions>
                 <configuration>
+                    <classpathScope>test</classpathScope>
                     <longModulepath>false</longModulepath>
                     <executable>java</executable>
                     <arguments>
                         <argument>--module-path</argument>
                         <modulepath/>
                         <argument>--add-modules</argument>
-                        <argument>user.view</argument>
+                        <argument>ALL-MODULE-PATH</argument>
                         <argument>--module</argument>
                         <argument>org.junit.platform.console</argument>
                         <argument>--scan-modules</argument>
