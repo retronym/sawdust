@@ -7,3 +7,5 @@ bach/Bach.jsh
 .gradle
 
 target/
+
+project/target/
